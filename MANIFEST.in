@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include sequertek *.css
+recursive-include sequertek *.csv
+recursive-include sequertek *.html
+recursive-include sequertek *.ico
+recursive-include sequertek *.js
+recursive-include sequertek *.json
+recursive-include sequertek *.md
+recursive-include sequertek *.png
+recursive-include sequertek *.py
+recursive-include sequertek *.svg
+recursive-include sequertek *.txt
+recursive-exclude sequertek *.pyc

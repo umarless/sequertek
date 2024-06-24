@@ -1,0 +1,45 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-12-05 13:05:55.969434",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "calling_status",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "calling_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Calling Status",
+   "options": "\nAsk to call back later date\nAsk to drop email\nNot a concern person new account mapping\nMeeting done on date and time\nNot answering call\nNot looking for security\nRecently buy security ask to connect next year\nConcern person left the company\nAsk to call next week date\nConcern persons on leave ask to connect when resume date\nContact no is wrong\nMeeting Scheduled\nGlobal procurement\nSmall company\nCompany shutdown operation"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-12-05 13:05:55.969434",
+ "modified_by": "Administrator",
+ "module": "Sequertek",
+ "name": "Status Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
