@@ -1,5 +1,8 @@
 import frappe
 from  erpnext.projects.doctype.task.task import get_children
+import json
+from frappe import _
+
 
 @frappe.whitelist()
 def get_reports_to_for_resignation(employee):
@@ -86,3 +89,27 @@ def get_default_contact(doctype, name):
 			return None
 	else:
 		return None
+      
+
+# @frappe.whitelist()
+# def mark_records_contacted(sales_order_names):
+#     if not sales_order_names:
+#         frappe.throw(_("No sales order names provided."))
+
+#     if isinstance(sales_order_names, str):
+#         try:
+#             sales_order_names = json.loads(sales_order_names)
+#         except json.JSONDecodeError:
+#             frappe.throw(_("Invalid input format for sales order names."))
+
+#     if not isinstance(sales_order_names, list):
+#         frappe.throw(_("Sales order names should be a list."))
+
+#     try:
+#         for name in sales_order_names:
+#             frappe.db.set_value("Sales Order", name, "custom_contacted", 1)
+#         frappe.db.commit()
+#         return _("Successfully marked {0} records as contacted.").format(len(sales_order_names))
+#     except Exception as e:
+#         frappe.log_error(frappe.get_traceback(), _("Failed to mark records as contacted"))
+#         frappe.throw(_("An error occurred while marking records as contacted. Please try again."))
